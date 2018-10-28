@@ -20,7 +20,8 @@ public class LibraryTest {
 
     @Test
     public void member_can_borrow_a_book_if_book_is_available(){
-        fail("Implement me");
+        
+
     }
 
     @Test

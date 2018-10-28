@@ -13,20 +13,26 @@ public class BookRepository {
     private Map<Book, LocalDate> borrowedBooks = new HashMap<>();
 
     public void addBooks(List<Book> books){
-        //TODO implement the missing feature
+        books.forEach( book -> {
+            availableBooks.put(new ISBN((long)1), book);
+        });
     }
 
     public Book findBook(long isbnCode) {
-        //TODO implement the missing feature
-        return null;
+        return availableBooks.get(isbnCode);
     }
 
     public void saveBookBorrow(Book book, LocalDate borrowedAt){
-        //TODO implement the missing feature
+        borrowedBooks.put(book, borrowedAt);
+        availableBooks.remove(book.isbn);
+    }
+
+    public void returnBookBorrow(Book book){
+        borrowedBooks.remove(book);
+        availableBooks.put(book.isbn, book);
     }
 
     public LocalDate findBorrowedBookDate(Book book) {
-        //TODO implement the missing feature
-        return null;
+        return borrowedBooks.get(book);
     }
 }

@@ -13,7 +13,7 @@ public class Student extends Member {
 
     @Override
     public void payBook(int numberOfDays) {
-        addToWallet(priceToPay(numberOfDays,15, 15,year == 1));
+        setWallet(priceToPay(numberOfDays,15, 15,year == 1));
         if(numberOfDays > 30) setLate(true);
         else setLate(false);
     }

@@ -14,7 +14,7 @@ public class BookRepository {
 
     public void addBooks(List<Book> books){
         books.forEach( book -> {
-            availableBooks.put(new ISBN((long)1), book);
+            availableBooks.put(book.isbn, book);
         });
     }
 

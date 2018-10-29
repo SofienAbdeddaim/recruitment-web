@@ -4,6 +4,7 @@ import fr.d2factory.libraryapp.book.Book;
 import fr.d2factory.libraryapp.book.ISBN;
 import fr.d2factory.libraryapp.library.Library;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,7 +17,7 @@ public abstract class Member {
      */
     private float wallet = 0;
     private boolean late;
-    List<Book> borrowedBooks;
+    List<Book> borrowedBooks = new ArrayList<>();
 
     public List<Book> getBorrowedBooks() {
         return borrowedBooks;

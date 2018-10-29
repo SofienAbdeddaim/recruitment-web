@@ -3,6 +3,10 @@ package fr.d2factory.libraryapp.member;
 public class Student extends Member {
     private int year;
 
+    public Student(int year) {
+        this.year = year;
+    }
+
     public int getYear() {
         return year;
     }
